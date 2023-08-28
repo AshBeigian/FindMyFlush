@@ -3,35 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>App Support: Loo Locator</title>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
-        /* Basic layout */
+        /* General and Layout */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #222;
+            color: #fff;
         }
         header, section, footer {
             max-width: 1000px;
             margin: auto;
             padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #333;
+        }
+        img {
+            max-width: 100%;
         }
 
-        /* Header Styles */
+        /* Header */
         header {
-            background-color: orange;
-            color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 40px;
+            position: relative;
+            background-color: #444;
+        }
+        header h1, header p {
+            margin: 0;
         }
         header h1 {
-            margin: 0;
             font-size: 2.5rem;
         }
         header p {
-            margin: 10px 0;
             font-size: 1.2rem;
             opacity: 0.8;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
         }
         /* Social Links */
         .social-links {
@@ -40,7 +54,7 @@
             right: 20px;
         }
         .social-links a {
-            margin-left: 10px;
+            margin-left: 15px;
             color: white;
             font-size: 24px;
             text-decoration: none;
@@ -48,7 +62,8 @@
 
         /* Content */
         section {
-            padding: 40px 20px;
+            padding: 40px;
+            margin: 20px 0;
         }
         section h2 {
             font-size: 1.5rem;
@@ -56,16 +71,20 @@
         section p {
             font-size: 1.1rem;
             margin-bottom: 20px;
-            line-height: 1.6;
+        }
+        .screenshots img {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin: 10px;
         }
 
-        /* Contact Us */
-        .contact-us {
-            background-color: #fff3e0;  /* A lighter shade of orange */
+        /* Footer and Contact */
+        footer {
+            background-color: #444;
             padding: 20px;
+            text-align: center;
         }
-        .contact-us a.button {
-            background-color: orange;
+        a.button {
+            background-color: #555;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
@@ -78,32 +97,39 @@
 
     <!-- Header -->
     <header>
+        <img src="your-logo.png" alt="Your Logo" class="logo">
         <h1>Loo Locator</h1>
         <p>Your trusted guide to public restrooms</p>
         <!-- Social Links -->
         <div class="social-links">
-            <a href="mailto:support@loolocator.com" id="mail-link">💌</a>
-            <a href="https://www.instagram.com/loolocator" target="_blank">📸</a>
-            <a href="https://www.appstore.com/loolocator" target="_blank">🍏</a>
+            <a href="mailto:support@loolocator.com" id="mail-link">[Email Icon]</a>
+            <a href="https://www.instagram.com/loolocator" target="_blank">[Instagram Icon]</a>
+            <a href="https://www.appstore.com/loolocator" target="_blank">[App Store Icon]</a>
         </div>
     </header>
+
+    <!-- Screenshots -->
+    <div class="screenshots">
+        <img src="screenshot1.png" alt="Screenshot 1">
+        <img src="screenshot2.png" alt="Screenshot 2">
+        <img src="screenshot3.png" alt="Screenshot 3">
+    </div>
 
     <!-- About the App -->
     <section class="about-app">
         <h2>About The App</h2>
-        <p>Loo Locator helps you find and rate public restrooms wherever you are. Don't just cross your legs—find a clean and accessible toilet near you!</p>
-        <p>Contribute by adding new locations and sharing your experiences. Let's create a better bathroom experience for everyone.</p>
+        <p>Loo Locator helps you find and rate public restrooms wherever you are. Contribute by adding new locations and sharing your experiences.</p>
     </section>
 
     <!-- Contact Us -->
-    <footer class="contact-us">
+    <footer>
         <h2>Contact Us</h2>
         <p>If you have any questions, feel free to reach out: <a href="mailto:support@loolocator.com">support@loolocator.com</a></p>
         <a href="mailto:support@loolocator.com" class="button">Email Us</a>
+        <p><a href="privacy.html">Privacy Policy</a></p>
     </footer>
 
     <!-- Optional JavaScript -->
-    <!-- To open email client directly -->
     <script>
         document.getElementById('mail-link').addEventListener('click', function(e) {
             e.preventDefault();
